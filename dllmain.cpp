@@ -10,7 +10,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  dwCallReason, LPVOID lpReserved)
     {
         g_hModule = hModule;
         DisableThreadLibraryCalls(hModule);
-        CreateThread(0, 0, MainThread_Initialize, g_hModule, 0, 0);
+        CloseHandle(CreateThread(0, 0, MainThread_Initialize, g_hModule, 0, 0));
     }
     return TRUE;
 }
