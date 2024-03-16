@@ -35,4 +35,7 @@
 // MINHOOK
 #include "libs/MinHook/MinHook.h"
 
+//	PEAK 53 GAME SDK
+#include <SDK.hpp>
+
 #endif //PCH_H
