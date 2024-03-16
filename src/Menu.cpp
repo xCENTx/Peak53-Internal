@@ -1,5 +1,11 @@
 #include "../pch.h"
 #include "../include/Menu.hpp"
+#include "../Exploits.h"
+
+// fwd declare static member variables
+bool	Exploits::m_toggle_etags;
+bool	Exploits::m_toggle_fullbright;
+
 namespace DX11_Base 
 {
 	namespace Styles 
@@ -60,6 +66,14 @@ namespace DX11_Base
             ImGui::Text("BASE MENU (PREVIEW)");
             ImGui::Text("BUILD VERSION: v1.0.1");
             ImGui::Text("BUILD DATE: 2/8/2024");
+
+            ImGui::Spacing();
+            ImGui::Separator();
+            ImGui::Spacing();
+
+            ImGui::Checkbox("E-TAGS", &Exploits::m_toggle_etags);
+            if (ImGui::Checkbox("FULL BRIGHT", &Exploits::m_toggle_fullbright))
+                Exploits::set_fullbright(Exploits::m_toggle_fullbright);
 
             ImGui::Spacing();
             ImGui::Separator();
@@ -153,12 +167,15 @@ namespace DX11_Base
         //  Watermark
         ImDraw->AddText(top_center, ImColor(1.0f, 1.0f, 1.0f, 1.0f), "https://github.com/NightFyre/DX11-ImGui-Internal-Hook");
 
+        if (Exploits::m_toggle_etags)
+            Exploits::e_tags();
+
         ImGui::End();
 	}
 
 	void Menu::Loops()
 	{
-
+        Exploits::update();
 	}
 
     void GUI::TextCentered(const char* pText)

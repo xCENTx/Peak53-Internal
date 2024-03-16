@@ -4,6 +4,7 @@
 #include "include/Game.hpp"
 #include "include/D3D11Window.hpp"
 #include "include/Hooking.hpp"
+#include "Exploits.h"
 using namespace DX11_Base;
 
 void ClientBGThread()
@@ -29,6 +30,7 @@ DWORD WINAPI MainThread_Initialize(LPVOID dwModule)
     g_D3D11Window = std::make_unique<D3D11Window>();            //  
     g_Hooking = std::make_unique<Hooking>();                    //  
     g_Menu = std::make_unique<Menu>();                          //  
+    Exploits();                                                 //
 
     //  CREATE WINDOW AND ESTABLISH HOOKS
     g_GameData->Init();                                         //
