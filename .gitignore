@@ -3,6 +3,7 @@
 bin/
 debug/
 x64/
+lib/
 
 # exclude personal settings
 *.sln
