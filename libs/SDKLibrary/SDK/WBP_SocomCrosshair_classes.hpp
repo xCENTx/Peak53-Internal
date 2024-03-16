@@ -1,0 +1,53 @@
+#pragma once
+
+// Dumped with Dumper-7!
+
+
+namespace SDK
+{
+//---------------------------------------------------------------------------------------------------------------------
+// CLASSES
+//---------------------------------------------------------------------------------------------------------------------
+
+// 0x99 (0x311 - 0x278)
+// WidgetBlueprintGeneratedClass WBP_SocomCrosshair.WBP_SocomCrosshair_C
+class UWBP_SocomCrosshair_C : public UUserWidget
+{
+public:
+	struct FPointerToUberGraphFrame              UberGraphFrame;                                    // 0x278(0x8)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                Bottom;                                            // 0x280(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                          CanvasPanel_0;                                     // 0x288(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                Circle;                                            // 0x290(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                Crosshair;                                         // 0x298(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                Left;                                              // 0x2A0(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                              MIddle;                                            // 0x2A8(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                Right;                                             // 0x2B0(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                TOP;                                               // 0x2B8(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                       Crosshair_length;                                  // 0x2C0(0x8)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                       Crosshair_thickness;                               // 0x2C8(0x8)(Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                       Crosshair_baseSpread;                              // 0x2D0(0x8)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                       Crosshair_spread;                                  // 0x2D8(0x8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                          DefaultColor;                                      // 0x2E0(0x10)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                          EnemyColor;                                        // 0x2F0(0x10)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                          FriendlyColor;                                     // 0x300(0x10)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	enum class EWeaponTypeCrosshair              WeaponTypeCrosshair;                               // 0x310(0x1)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+	static class UClass* StaticClass();
+	static class UWBP_SocomCrosshair_C* GetDefaultObj();
+
+	void SetSpread(double CurrentSpread);
+	void PaintCrosshair(enum class E_CrosshairType CrosshairColor);
+	void HitMarkerSpawn();
+	void HitIndicatorSpawn();
+	void Construct();
+	void SetCrosshairType();
+	void SetSpreadTexture(class UImage* Target, class UTexture2D* Texture);
+	void SetAllSpreadTexture(class UTexture2D* TOP, class UTexture2D* Bottom, class UTexture2D* Right, class UTexture2D* Left);
+	void PreConstruct(bool IsDesignTime);
+	void SetArrowSize(double In_Size_X, double In_Size_Y);
+	void ExecuteUbergraph_WBP_SocomCrosshair(int32 EntryPoint, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue_1, double CallFunc_Add_DoubleDouble_ReturnValue, double K2Node_CustomEvent_CurrentSpread, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_1, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_2, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_3, double CallFunc_Add_DoubleDouble_ReturnValue_1, enum class E_CrosshairType K2Node_CustomEvent_CrosshairColor, double CallFunc_Divide_DoubleDouble_ReturnValue_1, double CallFunc_Add_DoubleDouble_ReturnValue_2, double CallFunc_Add_DoubleDouble_ReturnValue_3, double CallFunc_Subtract_DoubleDouble_ReturnValue_2, double CallFunc_Subtract_DoubleDouble_ReturnValue_3, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_1, double CallFunc_Add_DoubleDouble_ReturnValue_4, double CallFunc_Add_DoubleDouble_ReturnValue_5, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue_4, class UHitMarker_C* CallFunc_Create_ReturnValue, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_2, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_4, class UPanelSlot* CallFunc_AddChild_ReturnValue, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_5, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue_1, const struct FAnchors& CallFunc_GetAnchors_ReturnValue, class UHitIndicatorWidget_C* CallFunc_Create_ReturnValue_1, const struct FVector2D& CallFunc_GetAlignment_ReturnValue, bool K2Node_SwitchEnum_CmpSuccess, class UImage* K2Node_CustomEvent_Target, class UTexture2D* K2Node_CustomEvent_Texture, class UTexture2D* K2Node_CustomEvent_Top, class UTexture2D* K2Node_CustomEvent_Bottom, class UTexture2D* K2Node_CustomEvent_Right, class UTexture2D* K2Node_CustomEvent_Left, bool K2Node_SwitchEnum_CmpSuccess_1, double CallFunc_Add_DoubleDouble_ReturnValue_6, double CallFunc_Add_DoubleDouble_ReturnValue_7, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_6, double CallFunc_Add_DoubleDouble_ReturnValue_8, bool K2Node_SwitchEnum_CmpSuccess_2, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_3, double CallFunc_Subtract_DoubleDouble_ReturnValue_5, double CallFunc_Subtract_DoubleDouble_ReturnValue_6, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_7, double CallFunc_Subtract_DoubleDouble_ReturnValue_7, bool K2Node_Event_IsDesignTime, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_4, double CallFunc_Add_DoubleDouble_ReturnValue_9, double CallFunc_Add_DoubleDouble_ReturnValue_10, const struct FLinearColor& Temp_struct_Variable, double CallFunc_Add_DoubleDouble_ReturnValue_11, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_5, enum class E_CrosshairType Temp_byte_Variable, const struct FLinearColor& K2Node_Select_Default, bool K2Node_SwitchEnum_CmpSuccess_3, bool K2Node_SwitchEnum_CmpSuccess_4, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_8, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_9, double CallFunc_Add_DoubleDouble_ReturnValue_12, double CallFunc_Subtract_DoubleDouble_ReturnValue_8, double CallFunc_Subtract_DoubleDouble_ReturnValue_9, double CallFunc_Add_DoubleDouble_ReturnValue_13, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_6, double CallFunc_Subtract_DoubleDouble_ReturnValue_10, double CallFunc_Subtract_DoubleDouble_ReturnValue_11, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_7, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_10, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_11, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_12, double K2Node_CustomEvent_In_Size_X, double K2Node_CustomEvent_In_Size_Y, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_13, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_8, double CallFunc_Subtract_DoubleDouble_ReturnValue_12, double CallFunc_Subtract_DoubleDouble_ReturnValue_13, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_14, double CallFunc_Subtract_DoubleDouble_ReturnValue_14, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_9, double CallFunc_Add_DoubleDouble_ReturnValue_14, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_15, double CallFunc_Add_DoubleDouble_ReturnValue_15, double CallFunc_Add_DoubleDouble_ReturnValue_16, double CallFunc_Divide_DoubleDouble_ReturnValue_2, double CallFunc_Subtract_DoubleDouble_ReturnValue_15, double CallFunc_Subtract_DoubleDouble_ReturnValue_16, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_10, double CallFunc_Subtract_DoubleDouble_ReturnValue_17, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_16, double CallFunc_Subtract_DoubleDouble_ReturnValue_18, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_11, double CallFunc_Add_DoubleDouble_ReturnValue_17, double CallFunc_Add_DoubleDouble_ReturnValue_18, class UCanvasPanelSlot* CallFunc_SlotAsCanvasSlot_ReturnValue_17, double CallFunc_Add_DoubleDouble_ReturnValue_19, double CallFunc_Divide_DoubleDouble_ReturnValue_3, double CallFunc_Subtract_DoubleDouble_ReturnValue_19, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_12);
+};
+
+}
+
+

@@ -1,0 +1,12 @@
+# exclude binaries and debug output
+.vs/
+bin/
+debug/
+x64/
+lib/
+
+# exclude personal settings
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
