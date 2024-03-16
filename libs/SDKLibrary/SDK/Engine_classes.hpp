@@ -1906,7 +1906,9 @@ public:
 	uint8                                        Pad_C71[0xC];                                      // Fixing Size After Last Property  [ Dumper-7 ]
 	class UWorld*                                World;                                             // 0x78(0x8)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UGameInstance*                         GameInstance;                                      // 0x80(0x8)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_C72[0x318];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_C72[0x28];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	__int8									     mViewMode;											// 0x00B0
+	unsigned char                                Pad_SY0M[0x2EF];									// 0x00B1(0x02D8) MISSED OFFSET (PADDING)
 
 	static class UClass* StaticClass();
 	static class UGameViewportClient* GetDefaultObj();
@@ -13594,7 +13596,9 @@ public:
 class ULevel : public UObject
 {
 public:
-	uint8                                        Pad_201E[0x90];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_201E[0x70];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	TArray<class AActor*>					     Actors;
+	TArray<class AActor*>					     JunkActors;
 	class UWorld*                                OwningWorld;                                       // 0xB8(0x8)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UModel*                                Model;                                             // 0xC0(0x8)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UModelComponent*>               ModelComponents;                                   // 0xC8(0x10)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
