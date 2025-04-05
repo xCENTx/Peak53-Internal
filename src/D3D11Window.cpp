@@ -203,7 +203,10 @@ namespace DX11_Base
 	void D3D11Window::Overlay(IDXGISwapChain* pSwapChain)
 	{
 		if (!b_ImGui_Initialized)
+		{
 			InitializeImGui(pSwapChain);
+			return;
+		}
 
 		ImGui_ImplDX11_NewFrame();
 		ImGui_ImplWin32_NewFrame();
